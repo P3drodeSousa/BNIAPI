@@ -17,7 +17,7 @@ jobs:
       - name: APT UPDATE and INSTALL SSHPASS
         run: sudo apt update && sudo apt install sshpass
 
-      - name: Deploy to Infomaniaks
+      - name: Deploy to Infomaniak
         run:
           sshpass -e ssh -o stricthostkeychecking=no ${{ secrets.APP_USER }}@${{ secrets.APP_HOST }}
           "cd /home/clients/a683ce3e7f173dc4178c580ea6b4e7c3/sites/BNIDOC.studio60.ch &&
